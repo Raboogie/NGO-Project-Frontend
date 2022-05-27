@@ -1,0 +1,22 @@
+<h2>Event Management</h2>
+<button  (click)="addEvent()">Add a new Event</button>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Event</th>
+    <th>Category</th>
+    <th>Location</th>
+    <th>Start Date</th>
+    <th>End date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let event of events;">
+    <td>{{event.event}}</td>
+    <td>{{event.category}}</td>
+    <td>{{event.location}}</td>
+    <td>{{event.startDate}}</td>
+    <td>{{event.endDate}}</td>
+  </tr>
+  </tbody>
+</table>
