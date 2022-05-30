@@ -1,4 +1,4 @@
-<h2>Event Management</h2>
+<h2 class="text-center">Event Management</h2>
 <button  (click)="addEvent()">Add a new Event</button>
 <table class="table table-bordered">
   <thead>
@@ -6,17 +6,17 @@
     <th>Event</th>
     <th>Category</th>
     <th>Location</th>
-    <th>Start Date</th>
-    <th>End date</th>
+    <th>Adult Price</th>
+    <th>Child Price</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let event of events;">
-    <td>{{event.event}}</td>
+    <td>{{event.eventName}}</td>
     <td>{{event.category}}</td>
     <td>{{event.location}}</td>
-    <td>{{event.startDate}}</td>
-    <td>{{event.endDate}}</td>
+    <td>{{event.adultTicketPrice}}</td>
+    <td>{{event.childTicketPrice}}</td>
   </tr>
   </tbody>
 </table>
