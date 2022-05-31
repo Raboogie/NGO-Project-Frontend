@@ -2,7 +2,7 @@
 import {Time} from "@angular/common";
 
 export class Event {
-  eventID: number | undefined;
+  eventId?: number;
   eventName: string | undefined;
   category: string | undefined;
   location: string | undefined;
