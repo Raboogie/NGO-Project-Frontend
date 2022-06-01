@@ -32,4 +32,7 @@ export class CreateEventComponent implements OnInit {
     this.saveEvent();
   }
 
+  cancelEvent() {
+    this.router.navigate(["events"]);
+  }
 }

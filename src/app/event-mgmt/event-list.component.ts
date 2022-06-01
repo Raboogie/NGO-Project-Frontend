@@ -40,6 +40,7 @@ export class EventListComponent implements OnInit {
 
   addEvent() {
     console.log("Adding an event!")
+    this.router.navigate(['createEvent'])
   }
 
   deleteEvent(id?: number) {

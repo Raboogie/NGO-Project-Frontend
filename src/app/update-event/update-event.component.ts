@@ -35,4 +35,8 @@ export class UpdateEventComponent implements OnInit {
   private goToEventList() {
     this.router.navigate(["/events"]);
   }
+
+  cancelEvent() {
+    this.router.navigate(["/events"]);
+  }
 }

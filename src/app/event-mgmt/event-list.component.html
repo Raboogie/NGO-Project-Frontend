@@ -1,5 +1,5 @@
 <h2 class="text-center">Event Management</h2>
-<button  (click)="addEvent()">Add a new Event</button>
+<button  (click)="addEvent()" class="btn btn-primary" style="margin-bottom: 5px" >Add a New Event</button>
 <table class="table table-bordered">
   <thead>
   <tr>
@@ -8,7 +8,7 @@
     <th>Location</th>
     <th>Adult Price</th>
     <th>Child Price</th>
-    <th>Actions</th>
+    <th style="text-align: center">Actions</th>
   </tr>
   </thead>
   <tbody>
@@ -19,9 +19,11 @@
     <td>{{event.adultTicketPrice}}</td>
     <td>{{event.childTicketPrice}}</td>
     <td>
+      <div style="display: flex; flex-direction: row; justify-content: space-between">
       <button (click)="updateEvent(event.eventId)" class="btn btn-info" style="margin: 5px">Update</button>
       <button (click)="deleteEvent(event.eventId)" class="btn btn-danger" style="margin: 5px">Delete</button>
       <button (click)="eventDetails(event.eventId)" class="btn btn-secondary" style="margin: 5px">View</button>
+      </div>
     </td>
   </tr>
   </tbody>
