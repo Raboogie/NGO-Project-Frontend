@@ -1,13 +1,13 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { Users } from '../models/users';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
-  data:any=[];
+ /* data:any=[];
   constructor(private http:HttpClient) { }
   getAllEmployees(): Observable<Users[]>{
     return this.http.get<Users[]>("http://localhost:8080/api/users/getAllUsers")
@@ -99,6 +99,6 @@ export class UserServiceService {
     errorHandler(error: HttpErrorResponse){
       return throwError(error.message || "Server Error");
     }
-  
+  */
   
 }

@@ -32,57 +32,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <!-- <tr *ngFor="let user of userService.data;">
-                        <td>{{user.userId}}</td>
+                   <tr *ngFor="let user of user;">
+                        <td>{{user.id}}</td>
                         <td>{{user.firstname}}</td>
                         <td>{{user.lastname}}</td>
                         <td>{{user.username}}</td>
                         <td>{{user.email}}</td>
+                        <td>{{user.role}}</td>
                         <td><span class="table-update"
-                            ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" >
+                            ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" (click)="updateEvent(user.id)">
                               Update
                             </button></span
                           ></td>
                         <td><span class="table-remove"
-                            ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" >
+                            ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" (click)="deleteUser(user.id)" >
                               Remove
                             </button></span
                           ></td>
-                          <td>
-                            <span 
-      ><a href="#!" class="text-success"
-        ><i class="fas fa-plus fa-2x" aria-hidden="true"></i></a
-    ></span>
-                          </td>
                           
-                    </tr>-->
-                    <td>1</td>
-                    <td>Amrithaa</td>
-                    <td>Ilanchelian</td>
-                    <td>amy</td>
-                    <td>ilanamrita@gmail.com</td>
-                    <td>admin</td>
-                    <td><span class="table-update"
-                        ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" >
-                          Update
-                        </button></span
-                      ></td>
-                    <td><span class="table-remove"
-                        ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" >
-                          Remove
-                        </button></span
-                      ></td>
-                      <td>
-                        <span 
-  ><a href="#!" class="text-success"
-    ><i class="fas fa-plus fa-2x" aria-hidden="true"></i></a
-></span>
-                      </td>
+                          
+                    </tr>
                 </tbody>
             </table>
             <ng-template #noTable>
                 No data found!
             </ng-template>
+            
         </div></div>
     </body>
     

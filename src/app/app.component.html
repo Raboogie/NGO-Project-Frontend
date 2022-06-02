@@ -14,14 +14,12 @@
     <a href="#" class="navbar-brand">NGO PROJECT</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
+        <a href="/view" class="nav-link" routerLink="view">User View </a>
       </li>
       <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+        <a href="/admin" class="nav-link" routerLink="admin">Users</a>
       </li>
-      <li class="nav-item" *ngIf="showModeratorBoard">
-        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
-      </li>
+      
 
       <li class="nav-item" *ngIf="showAdminBoard">
         <a href="/events" class="nav-link" routerLink="events">Events</a>
