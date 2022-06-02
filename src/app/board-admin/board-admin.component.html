@@ -19,7 +19,6 @@
             <table class="table table-hover table-striped table-bordered table-responsive-md text-center ">
                 <thead class="thead-dark">
                     <tr class="clickable-row" >
-                        <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Username</th>
@@ -32,13 +31,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <tr *ngFor="let user of user;">
-                        <td>{{user.id}}</td>
+                   <tr *ngFor="let user of user and let t of updatedUser;">
+                 
                         <td>{{user.firstname}}</td>
                         <td>{{user.lastname}}</td>
                         <td>{{user.username}}</td>
                         <td>{{user.email}}</td>
-                        <td>{{user.role}}</td>
+                        <td>{{t.role}}</td>
+                   
                         <td><span class="table-update"
                             ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" (click)="updateEvent(user.id)">
                               Update
@@ -49,8 +49,7 @@
                               Remove
                             </button></span
                           ></td>
-                          
-                          
+   
                     </tr>
                 </tbody>
             </table>

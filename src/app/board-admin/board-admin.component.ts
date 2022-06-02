@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TokenStorageService } from '../_services/token-storage.service';
 import { UserService } from '../_services/user.service';
 import { user } from './user';
 
@@ -11,7 +12,8 @@ import { user } from './user';
 export class BoardAdminComponent implements OnInit {
   content?: string;
   user?: user[];
-  constructor(private userService: UserService, private router: Router) { }
+  updatedUser?: user[];
+  constructor(private userService: UserService, private router: Router, private token:TokenStorageService) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -22,6 +24,7 @@ export class BoardAdminComponent implements OnInit {
       console.log(data);
       this.user = data;
     });
+    this.updatedUser = this.token.getUser();
   }
 
   deleteUser(id?: number) {
