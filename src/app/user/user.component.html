@@ -1,0 +1,65 @@
+<body>
+  
+    <div class="container" >
+        <h4 class="text-center"> User List</h4>
+        <div id="table" class="table-editable">
+            
+    
+          <div class="float-end">
+            <span class="table-add float-right mb-3 mr-2">
+              <button class="fas fa-plus fa-2x" aria-hidden="true"
+            
+            >Add +</button>
+            
+            </span>
+            
+        </div>
+            
+            
+            <table class="table table-hover table-striped table-bordered table-responsive-md text-center ">
+                <thead class="thead-dark">
+                    <tr class="clickable-row" >
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of userService.data;">
+                        <td>{{user.userId}}</td>
+                        <td>{{user.firstname}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td><span class="table-update"
+                            ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" >
+                              Update
+                            </button></span
+                          ></td>
+                        <td><span class="table-remove"
+                            ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" >
+                              Remove
+                            </button></span
+                          ></td>
+                          <td>
+                            <span 
+      ><a href="#!" class="text-success"
+        ><i class="fas fa-plus fa-2x" aria-hidden="true"></i></a
+    ></span>
+                          </td>
+                          
+                    </tr>
+                </tbody>
+            </table>
+            <ng-template #noTable>
+                No data found!
+            </ng-template>
+        </div></div>
+    </body>
+    

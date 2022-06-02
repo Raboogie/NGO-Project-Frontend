@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+<h3>Create an Event</h3>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Event</label>
+    <input type="text" class="form-control" id="eventName" [(ngModel)]="event.eventName" name="eventName">
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <input type="text" class="form-control" id="category" [(ngModel)]="event.category" name="category">
+  </div>
+  <div class="form-group">
+    <label>Location</label>
+    <input type="text" class="form-control" id="location" [(ngModel)]="event.location" name="location">
+  </div>
+  <div class="form-group">
+    <label>Adult Ticket Price</label>
+    <input type="number" class="form-control" id="adultTicketPrice" [(ngModel)]="event.adultTicketPrice" name="adultTicketPrice">
+  </div>
+  <div class="form-group">
+    <label>Child Ticket Price</label>
+    <input type="number" class="form-control" id="childTicketPrice" [(ngModel)]="event.childTicketPrice" name="childTicketPrice">
+  </div>
+  <button class="btn btn-success" type="submit">Submit</button>
+</form>
+</div>
+
+

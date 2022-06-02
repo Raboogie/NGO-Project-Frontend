@@ -1,0 +1,28 @@
+<h2 class="text-center">Event Management</h2>
+<button  (click)="addEvent()">Add a new Event</button>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Event</th>
+    <th>Category</th>
+    <th>Location</th>
+    <th>Adult Price</th>
+    <th>Child Price</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let event of events;">
+    <td>{{event.eventName}}</td>
+    <td>{{event.category}}</td>
+    <td>{{event.location}}</td>
+    <td>{{event.adultTicketPrice}}</td>
+    <td>{{event.childTicketPrice}}</td>
+    <td>
+      <button (click)="updateEvent(event.eventId)" class="btn btn-info" style="margin: 5px">Update</button>
+      <button (click)="deleteEvent(event.eventId)" class="btn btn-danger" style="margin: 5px">Delete</button>
+      <button (click)="eventDetails(event.eventId)" class="btn btn-secondary" style="margin: 5px">View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
