@@ -35,8 +35,11 @@ export class UpdateEventComponent implements OnInit {
   private goToEventList() {
     this.router.navigate(["/events"]);
   }
+<<<<<<< HEAD
 
   cancelEvent() {
     this.router.navigate(["/events"]);
   }
+=======
+>>>>>>> Amyfrontend
 }

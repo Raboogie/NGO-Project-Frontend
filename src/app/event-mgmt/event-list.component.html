@@ -1,14 +1,21 @@
-<h2 class="text-center">Event Management</h2>
-<button  (click)="addEvent()" class="btn btn-primary" style="margin-bottom: 5px" >Add a New Event</button>
-<table class="table table-bordered">
-  <thead>
+
+<div class="container" >
+<h2 class="text-center fw-bold mb-7 text-uppercase" > Event Management</h2>
+<div id="table" class="table-editable">
+  
+        <div class="float-end">
+          <span class="table-add float-right mb-3 mr-2">
+<button  class="fas fa-plus fa-2x" aria-hidden="true" (click)="addEvent()">Add +</button> </span></div>
+<table class="table table-hover table-striped table-bordered table-responsive-md text-center ">
+  <thead class="thead-dark">
   <tr>
     <th>Event</th>
     <th>Category</th>
     <th>Location</th>
     <th>Adult Price</th>
     <th>Child Price</th>
-    <th style="text-align: center">Actions</th>
+    <th>Actions</th>
+   
   </tr>
   </thead>
   <tbody>
@@ -18,13 +25,14 @@
     <td>{{event.location}}</td>
     <td>{{event.adultTicketPrice}}</td>
     <td>{{event.childTicketPrice}}</td>
+
     <td>
-      <div style="display: flex; flex-direction: row; justify-content: space-between">
       <button (click)="updateEvent(event.eventId)" class="btn btn-info" style="margin: 5px">Update</button>
       <button (click)="deleteEvent(event.eventId)" class="btn btn-danger" style="margin: 5px">Delete</button>
       <button (click)="eventDetails(event.eventId)" class="btn btn-secondary" style="margin: 5px">View</button>
-      </div>
     </td>
   </tr>
   </tbody>
 </table>
+</div>
+</div>

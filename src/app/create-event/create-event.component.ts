@@ -32,7 +32,10 @@ export class CreateEventComponent implements OnInit {
     this.saveEvent();
   }
 
+<<<<<<< HEAD
   cancelEvent() {
     this.router.navigate(["events"]);
   }
+=======
+>>>>>>> Amyfrontend
 }
