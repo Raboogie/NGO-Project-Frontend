@@ -20,7 +20,7 @@ export class BoardAdminComponent implements OnInit {
   }
 
   private getUsers() {
-    this.userService.getAllEmployees().subscribe(data => {
+    this.userService.getAllUsers().subscribe(data => {
       console.log(data);
       this.user = data;
     });
@@ -29,19 +29,23 @@ export class BoardAdminComponent implements OnInit {
 
   deleteUser(id?: number) {
     if (id != null) {
-      this.userService.deleteEmployees(id).subscribe(data => {
+      this.userService.deleteUser(id).subscribe(data => {
         console.log(data);
         this.getUsers();
       })
     }
   }
 
-  updateEvent(id?: any) {
-    this.router.navigate(['update-user', id]);
+  updateUsers(id?: any) {
+    this.router.navigate(['edit-user', id]);
   }
 
-  addEvent() {
-    this.router.navigate(['add-user']);
+  
+
+  addUser() {
+    this.router.navigate(['update-user']);
   }
+
+ 
 
 }

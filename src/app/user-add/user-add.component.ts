@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { user } from '../board-admin/user';
 import { UserService } from '../_services/user.service';
@@ -9,27 +10,32 @@ import { UserService } from '../_services/user.service';
   styleUrls: ['./user-add.component.css']
 })
 export class UserAddComponent implements OnInit {
-  user: user = new user;
+  public employeeForm: any;
+  employees: any;
+  errorMsg: any;
+
+  user: user = new user();
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    
   }
-  saveUser() {
-    this.userService.addEmployee(this.user).subscribe(data => {
+
+  saveEvent() {
+    this.userService.addUser(this.user).subscribe(data => {
       console.log(data);
-      this.goToUserList
+      this.goToEventList()
     },
       error => console.log(error));
   }
 
-  goToUserList() {
-    this.router.navigate(["admin"]);
+  goToEventList() {
+    this.router.navigate(['/admin']);
   }
 
   onSubmit(){
-    //this.saveUser();
-    this.router.navigate(["admin"]);
+    console.log(this.user);
+    this.saveEvent();
   }
+
 
 }

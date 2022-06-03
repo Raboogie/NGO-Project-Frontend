@@ -11,7 +11,15 @@
 </div>-->
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <img
+        id="profile-img"
+        src="https://s3.us-east-2.amazonaws.com/ngoproject/IMG_0255.png"
+        class="profile-img-card"
+        width="70"
+        height="70"
+      />
     <a href="#" class="navbar-brand">NGO PROJECT</a>
+    
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item"*ngIf="isLoggedIn">
         <a href="/view" class="nav-link" routerLink="view">User View </a>

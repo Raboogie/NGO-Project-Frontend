@@ -14,6 +14,7 @@ import { BoardAdminComponent } from "./board-admin/board-admin.component";
 import { UserAddComponent } from "./user-add/user-add.component";
 import { UserViewComponent } from "./user-view/user-view.component";
 import { RegisterComponent } from "./register/register.component";
+import { UserEditComponent } from "./user-edit/user-edit.component";
 
 const routes: Routes = [
   {path: "events", component: EventListComponent},
@@ -27,9 +28,10 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  {path: "update-user/:id",component:UserAddComponent},
+  {path: "update-user",component:UserAddComponent},
   {path:'view',component:UserViewComponent},
   {path:'reg',component:RegisterComponent},
+  {path:'edit-user/:id',component: UserEditComponent},
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 

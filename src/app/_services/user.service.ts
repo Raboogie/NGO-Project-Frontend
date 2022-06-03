@@ -27,26 +27,29 @@ export class UserService {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
 
-  getAllEmployees(): Observable<user[]>{
+  getAllUsers(): Observable<user[]>{
+    console.log("hererere")
     return this.http.get<user[]>("http://localhost:8080/api/users/getAllUsers")
     .pipe(catchError(this.errorHandler));
   }
 
- deleteEmployees(id:number): Observable<user[]>{
+ deleteUser(id:number): Observable<user[]>{
     return this.http.delete<user[]>("http://localhost:8080/api/users/deleteUser/"+id);
   }
 
-  addEmployee(body:any) :Observable<user[]>{
-    return this.http.post<user[]>("http://localhost:8080/api/auth/signup",body)
-    .pipe(catchError(this.errorHandler));
+  addUser(body:any) :Observable<user[]>{
+    console.log("hererere")
+    return this.http.post<user[]>("http://localhost:8080/api/auth/signup",body);
   } 
 
-  getEmployee(id: number): Observable<user[]>{
+  getUser(id: number): Observable<user[]>{
     return this.http.get<user[]>("http://localhost:8080/api/users/getUser/" + id)
     .pipe(catchError(this.errorHandler));
     
   }
-  
+  updateUser(id: number, user: user): Observable<user[]> {
+    return this.http.put<user[]>("http://localhost:8080/api/users/updateUser/" + id, user);
+  }
 
   errorHandler(error: HttpErrorResponse){
     return throwError(error.message || "Server Error");

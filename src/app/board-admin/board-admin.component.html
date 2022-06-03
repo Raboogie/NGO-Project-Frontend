@@ -1,13 +1,12 @@
-<body>
-  
+
     <div class="container" >
-        <h4 class="text-center"> User List</h4>
+        <h2 class="text-center fw-bold mb-7 text-uppercase"> User List</h2>
         <div id="table" class="table-editable">
             
     
           <div class="float-end">
             <span class="table-add float-right mb-3 mr-2">
-              <button class="fas fa-plus fa-2x" aria-hidden="true"
+              <button class="fas fa-plus fa-2x" aria-hidden="true" (click)="addUser()"
             
             >Add +</button>
             
@@ -31,16 +30,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <tr *ngFor="let user of user and let t of updatedUser;">
+                   <tr *ngFor="let user of user;">
                  
                         <td>{{user.firstname}}</td>
                         <td>{{user.lastname}}</td>
                         <td>{{user.username}}</td>
                         <td>{{user.email}}</td>
-                        <td>{{t.role}}</td>
+                        <td>{{user.rolename}}</td>
                    
                         <td><span class="table-update"
-                            ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" (click)="updateEvent(user.id)">
+                            ><button type="button" class="btn btn-warning btn-rounded btn-sm my-0" (click)="updateUsers(user.id)">
                               Update
                             </button></span
                           ></td>
@@ -57,6 +56,7 @@
                 No data found!
             </ng-template>
             
-        </div></div>
-    </body>
+        </div>
+      </div>
+
     

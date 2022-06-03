@@ -1,10 +1,16 @@
-<div class="col-md-12">
-    <div class="card card-container">
+<div class="row d-flex justify-content-center align-items-center h-100">
+<div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+        <div class="card-body p-5 text-center">
+            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
       <img
         id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+        src="https://s3.us-east-2.amazonaws.com/ngoproject/IMG_0255.png"
         class="profile-img-card"
       />
+      
+                 
       <form
         *ngIf="!isLoggedIn"
         name="form"
@@ -12,8 +18,8 @@
         #f="ngForm"
         novalidate
       >
-        <div class="form-group">
-          <label for="username">Username</label>
+        <div class="form-group form-outline form-white mb-4">
+          <label class="text-light"for="username">Username</label>
           <input
             type="text"
             class="form-control"
@@ -30,8 +36,8 @@
             Username is required!
           </div>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
+        <div class="form-group form-outline form-white mb-4 ">
+          <label class="text-light"for="password">Password</label>
           <input
             type="password"
             class="form-control"
@@ -53,7 +59,7 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">
+          <button class="btn btn-outline-light btn-lg px-5 mb-2 ">
             Login
           </button>
         </div>
@@ -73,4 +79,5 @@
       </div>
     </div>
   </div>
+</div>
   
