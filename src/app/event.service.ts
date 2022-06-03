@@ -8,11 +8,19 @@ import {Event} from "./event";
 })
 export class EventService {
   // change later to match aws rds server path
-  private baseURL = "http://localhost:9090/getAllEvents";
-  private createEventURL = "http://localhost:9090/addEvent";
-  private getEventByIdURL = "http://localhost:9090/getEvent";
-  private updateEventURL = "http://localhost:9090/updateEvent"
-  private deleteEventURL = "http://localhost:9090/deleteEvent"
+  /*
+  private baseURL = "/api/event/getAllEvents";
+  private createEventURL = "http://localhost:9090/api/event/addEvent";
+  private getEventByIdURL = "http://localhost:9090/api/event/api/event/getEvent";
+  private updateEventURL = "http://localhost:9090/api/event/updateEvent"
+  private deleteEventURL = "http://localhost:9090/api/event/deleteEvent"
+  */
+
+  private baseURL = "http://ec2-18-119-11-84.us-east-2.compute.amazonaws.com:8080/getAllEvents";
+  private createEventURL = "http://ec2-18-119-11-84.us-east-2.compute.amazonaws.com:8080/addEvent";
+  private getEventByIdURL = "http://ec2-18-119-11-84.us-east-2.compute.amazonaws.com:8080/getEvent";
+  private updateEventURL = "http://ec2-18-119-11-84.us-east-2.compute.amazonaws.com:8080/updateEvent"
+  private deleteEventURL = "http://ec2-18-119-11-84.us-east-2.compute.amazonaws.com:8080/deleteEvent"
 
   // inject HttpClient module from the app.module
   constructor(private httpClient: HttpClient) { }
